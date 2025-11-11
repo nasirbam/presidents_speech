@@ -15,19 +15,37 @@
         
         body {
             font-family: 'Hind Siliguri', sans-serif;
-            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
-            background-size: 400% 400%;
+            background: 
+                linear-gradient(135deg, rgba(26, 42, 108, 0.85), rgba(178, 31, 31, 0.85), rgba(253, 187, 45, 0.85)),
+                url('https://ik.imagekit.io/nasirbam/bna_logo.png?updatedAt=1751567035734') center/200px no-repeat;
+            background-size: 400% 400%, 200px;
+            background-attachment: fixed;
             animation: gradientBG 15s ease infinite;
             color: #fff;
             line-height: 1.6;
             padding: 15px;
             min-height: 100vh;
+            position: relative;
+        }
+        
+        /* ব্যাকগ্রাউন্ড লোগো ইফেক্ট */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://ik.imagekit.io/nasirbam/bna_logo.png?updatedAt=1751567035734') center/150px no-repeat;
+            opacity: 0.1;
+            z-index: -1;
+            pointer-events: none;
         }
         
         @keyframes gradientBG {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+            0% { background-position: 0% 50%, center; }
+            50% { background-position: 100% 50%, center; }
+            100% { background-position: 0% 50%, center; }
         }
         
         .container {
@@ -37,6 +55,7 @@
             border-radius: 15px;
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px);
         }
         
         .header {
@@ -58,7 +77,6 @@
         .logo {
             width: 70px;
             height: 70px;
-            background: linear-gradient(135deg, #06d6a0, #ffd166);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -66,11 +84,15 @@
             margin-right: 15px;
             border: 2px solid white;
             box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+            overflow: hidden;
+            background: white;
         }
         
-        .logo i {
-            font-size: 35px;
-            color: #1a2a6c;
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            padding: 5px;
         }
         
         .header-text {
@@ -279,6 +301,11 @@
         @media (max-width: 768px) {
             body {
                 padding: 10px;
+                background-size: 400% 400%, 120px;
+            }
+            
+            body::before {
+                background-size: 120px;
             }
             
             .header {
@@ -296,10 +323,6 @@
                 width: 60px;
                 height: 60px;
                 margin-right: 0;
-            }
-            
-            .logo i {
-                font-size: 30px;
             }
             
             .header h1 {
@@ -351,6 +374,14 @@
         }
         
         @media (max-width: 480px) {
+            body {
+                background-size: 400% 400%, 100px;
+            }
+            
+            body::before {
+                background-size: 100px;
+            }
+            
             .header h1 {
                 font-size: 1.4rem;
             }
@@ -378,7 +409,7 @@
         <div class="header">
             <div class="logo-container">
                 <div class="logo">
-                    <img src="https://ik.imagekit.io/nasirbam/bna_logo.png?updatedAt=1751567035734" alt="BNA Logo">
+                    <img src="https://ik.imagekit.io/nasirbam/bna_logo.png?updatedAt=1751567035734" alt="বাংলাদেশ নার্সেস এসোসিয়েশন লোগো">
                 </div>
                 <div class="header-text">
                     <h1>বাংলাদেশ নার্সেস এসোসিয়েশন (বিএনএ) </h1>
@@ -428,19 +459,18 @@
                 
                 <div class="president-info">
                     <div class="president-name">মোঃ মিজানুর রহমান</div>
-                    <div class="president-designation">সভাপতি, বাংলাদেশ নার্সেস এসোসিয়েশন</div>
+                    <div class="president-designation">সভাপতি, বাংলাদেশ নার্সেস এসোসিয়েশন (বিএনএ) </div>
                     <p> ময়মনসিংহ জেলা শাখা </p>
-                    
                     <div class="education">
-                        
+                       
                         <p>• এমপিএইচ (এনইউ)</p>
-                        <p>• পোস্ট বেসিক বি.এস.সি ইন নার্সিং (ডিইউ)</p>
-                        <p>• ডিপ্লোমা ইন নার্সিং (এমএনসি)</p>
+                        <p>• পোসট বেসিক বি.এস.সি ইন নার্সিং (ডিইউ)</p>
+                        <p>• ডিপ্লোমা ইন নার্সিং (এমএসসি)</p>
                     </div>
                     
                     <div class="contact">
                         <i class="fas fa-phone-alt"></i>
-                        <a href="tel:+8801712345678">+৮৮০ ১৭১২-৩৪৫৬৭৮</a>
+                        <a href="tel:+8801712345678">+৮৮০ ১৭১১-১৭৮৮৯৪</a>
                     </div>
                 </div>
             </div>
