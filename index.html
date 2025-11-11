@@ -4,15 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>বাংলাদেশ নার্সেস এসোসিয়েশন, ময়মনসিংহ জেলা শাখা</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        /* SuttonyMJ ফন্ট ইমপোর্ট */
+        @font-face {
+            font-family: 'SuttonyMJ';
+            src: url('https://fonts.cdnfonts.com/s/85072/SuttonyMJ.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
         }
         
         body {
+            font-family: 'SuttonyMJ', 'Noto Sans Bengali', sans-serif;
             background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
             background-size: 400% 400%;
             animation: gradientBG 15s ease infinite;
@@ -45,6 +55,7 @@
         }
         
         .header h1 {
+            font-family: 'SuttonyMJ', 'Noto Sans Bengali', sans-serif;
             font-size: 2.5rem;
             margin-bottom: 10px;
             color: #ffd166;
@@ -52,6 +63,7 @@
         }
         
         .header h2 {
+            font-family: 'SuttonyMJ', 'Noto Sans Bengali', sans-serif;
             font-size: 1.5rem;
             color: #06d6a0;
             font-weight: 400;
@@ -73,8 +85,8 @@
             flex: 0 0 300px;
             padding: 20px;
             display: flex;
-            justify-content: center;
-            align-items: flex-start;
+            flex-direction: column;
+            align-items: center;
         }
         
         .president-img {
@@ -85,7 +97,92 @@
             border: 3px solid #ffd166;
         }
         
+        .president-info {
+            margin-top: 20px;
+            text-align: center;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 15px;
+            border-left: 4px solid #06d6a0;
+        }
+        
+        /* সভাপতির নামের অ্যানিমেশন */
+        .president-name {
+            font-family: 'SuttonyMJ', 'Noto Sans Bengali', sans-serif;
+            font-size: 1.5rem;
+            color: #ffd166;
+            margin-bottom: 5px;
+            animation: nameAnimation 3s infinite alternate;
+            text-shadow: 0 0 10px rgba(255, 209, 102, 0.7);
+        }
+        
+        @keyframes nameAnimation {
+            0% {
+                transform: scale(1);
+                color: #ffd166;
+                text-shadow: 0 0 10px rgba(255, 209, 102, 0.7);
+            }
+            50% {
+                transform: scale(1.05);
+                color: #ff9e00;
+                text-shadow: 0 0 15px rgba(255, 209, 102, 0.9);
+            }
+            100% {
+                transform: scale(1);
+                color: #ffd166;
+                text-shadow: 0 0 10px rgba(255, 209, 102, 0.7);
+            }
+        }
+        
+        .president-designation {
+            font-family: 'SuttonyMJ', 'Noto Sans Bengali', sans-serif;
+            font-size: 1rem;
+            color: #06d6a0;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        
+        .education {
+            margin: 10px 0;
+            text-align: left;
+        }
+        
+        .education h4 {
+            font-family: 'SuttonyMJ', 'Noto Sans Bengali', sans-serif;
+            color: #ffd166;
+            margin-bottom: 5px;
+            font-size: 1rem;
+        }
+        
+        .education p {
+            font-family: 'SuttonyMJ', 'Noto Sans Bengali', sans-serif;
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+        }
+        
+        .contact {
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        
+        .contact a {
+            font-family: 'SuttonyMJ', 'Noto Sans Bengali', sans-serif;
+            color: #ffd166;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        
+        .contact a:hover {
+            color: #06d6a0;
+        }
+        
         .greeting {
+            font-family: 'SuttonyMJ', 'Noto Sans Bengali', sans-serif;
             font-size: 1.8rem;
             color: #ffd166;
             margin-bottom: 20px;
@@ -95,12 +192,14 @@
         }
         
         .message {
+            font-family: 'SuttonyMJ', 'Noto Sans Bengali', sans-serif;
             font-size: 1.1rem;
             margin-bottom: 25px;
             text-align: justify;
         }
         
         .highlight {
+            font-family: 'SuttonyMJ', 'Noto Sans Bengali', sans-serif;
             color: #ffd166;
             font-weight: bold;
         }
@@ -110,6 +209,7 @@
         }
         
         .priorities h3 {
+            font-family: 'SuttonyMJ', 'Noto Sans Bengali', sans-serif;
             color: #06d6a0;
             margin-bottom: 15px;
             font-size: 1.5rem;
@@ -122,6 +222,7 @@
         }
         
         .priority-list li {
+            font-family: 'SuttonyMJ', 'Noto Sans Bengali', sans-serif;
             margin-bottom: 15px;
             padding-left: 20px;
             position: relative;
@@ -137,6 +238,7 @@
         }
         
         .conclusion {
+            font-family: 'SuttonyMJ', 'Noto Sans Bengali', sans-serif;
             margin-top: 30px;
             font-style: italic;
             text-align: center;
@@ -153,12 +255,14 @@
         }
         
         .name {
+            font-family: 'SuttonyMJ', 'Noto Sans Bengali', sans-serif;
             font-size: 1.3rem;
             color: #ffd166;
             margin-bottom: 5px;
         }
         
         .designation {
+            font-family: 'SuttonyMJ', 'Noto Sans Bengali', sans-serif;
             font-size: 1rem;
             color: #06d6a0;
         }
@@ -226,7 +330,24 @@
             
             <div class="image-content">
                 <!-- সভাপতির ছবি এখানে যোগ করতে হবে -->
-                <img src=https://ik.imagekit.io/nasirbam/Member%20list/Mizan%20Vai%20Pic%202%20-1.png?updatedAt=1762839501894" alt="সভাপতির ছবি" class="president-img">
+                <img src="https://ik.imagekit.io/nasirbam/Member%20list/Mizan%20Vai%20Pic%202%20-1.png?updatedAt=1762839501894" class="president-img">
+                
+                <div class="president-info">
+                    <div class="president-name">মোঃ মিজানুর রহমান</div>
+                    <div class="president-designation">সভাপতি, বাংলাদেশ নার্সেস এসোসিয়েশন</div>
+                    
+                    <div class="education">
+                        <h4>শিক্ষাগত যোগ্যতা:</h4>
+                        <p>• এমপিএইচ (এনইউ)</p>
+                        <p>• বি.এস.সি ইন নার্সিং (ডিইউ)</p>
+                        <p>• ডিপ্লোমা ইন নার্সিং (এমএনসি)</p>
+                    </div>
+                    
+                    <div class="contact">
+                        <i class="fas fa-phone-alt"></i>
+                        <a href="tel:+8801712345678">+৮৮০ ১৭১১-১৭৮৮৯৪</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
