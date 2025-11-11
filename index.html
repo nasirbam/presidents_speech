@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>বাংলাদেশ নার্সেস এসোসিয়েশন, ময়মনসিংহ জেলা শাখা</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-   <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -13,22 +13,14 @@
             box-sizing: border-box;
         }
         
-        /* SuttonyMJ ফন্ট ইমপোর্ট */
-        @font-face {
-            font-family: 'Hind Siliguri';
-            src: url('https://fonts.cdnfonts.com/s/85072/SuttonyMJ.woff') format('woff');
-            font-weight: normal;
-            font-style: normal;
-        }
-        
         body {
-            font-family: 'Hind Siliguri', 'Noto Sans Bengali', sans-serif;
+            font-family: 'Hind Siliguri', sans-serif;
             background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
             background-size: 400% 400%;
             animation: gradientBG 15s ease infinite;
             color: #fff;
             line-height: 1.6;
-            padding: 20px;
+            padding: 15px;
             min-height: 100vh;
         }
         
@@ -49,41 +41,70 @@
         
         .header {
             background: rgba(0, 0, 0, 0.8);
-            padding: 30px;
-            text-align: center;
+            padding: 20px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             border-bottom: 2px solid #ff6b6b;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #06d6a0, #ffd166);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            border: 2px solid white;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+        }
+        
+        .logo i {
+            font-size: 35px;
+            color: #1a2a6c;
+        }
+        
+        .header-text {
+            text-align: center;
         }
         
         .header h1 {
-            font-family: 'SuttonyMJ', 'Noto Sans Bengali', sans-serif;
-            font-size: 2.5rem;
-            margin-bottom: 10px;
+            font-size: 2rem;
+            margin-bottom: 5px;
             color: #ffd166;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
         
         .header h2 {
-            font-family: 'SuttonyMJ', 'Noto Sans Bengali', sans-serif;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             color: #06d6a0;
-            font-weight: 400;
+            font-weight: 500;
         }
         
         .content {
             display: flex;
             flex-wrap: wrap;
-            padding: 30px;
+            padding: 20px;
         }
         
         .text-content {
             flex: 1;
             min-width: 300px;
-            padding: 20px;
+            padding: 15px;
         }
         
         .image-content {
             flex: 0 0 300px;
-            padding: 20px;
+            padding: 15px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -109,8 +130,7 @@
         
         /* সভাপতির নামের অ্যানিমেশন */
         .president-name {
-            font-family: 'SuttonyMJ', 'Noto Sans Bengali', sans-serif;
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             color: #ffd166;
             margin-bottom: 5px;
             animation: nameAnimation 3s infinite alternate;
@@ -136,11 +156,10 @@
         }
         
         .president-designation {
-            font-family: 'SuttonyMJ', 'Noto Sans Bengali', sans-serif;
             font-size: 1rem;
             color: #06d6a0;
             margin-bottom: 10px;
-            font-weight: bold;
+            font-weight: 600;
         }
         
         .education {
@@ -149,14 +168,12 @@
         }
         
         .education h4 {
-            font-family: 'SuttonyMJ', 'Noto Sans Bengali', sans-serif;
             color: #ffd166;
             margin-bottom: 5px;
             font-size: 1rem;
         }
         
         .education p {
-            font-family: 'SuttonyMJ', 'Noto Sans Bengali', sans-serif;
             font-size: 0.9rem;
             margin-bottom: 5px;
         }
@@ -170,10 +187,9 @@
         }
         
         .contact a {
-            font-family: 'SuttonyMJ', 'Noto Sans Bengali', sans-serif;
             color: #ffd166;
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 600;
             transition: color 0.3s;
         }
         
@@ -182,8 +198,7 @@
         }
         
         .greeting {
-            font-family: 'SuttonyMJ', 'Noto Sans Bengali', sans-serif;
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             color: #ffd166;
             margin-bottom: 20px;
             text-align: center;
@@ -192,16 +207,14 @@
         }
         
         .message {
-            font-family: 'SuttonyMJ', 'Noto Sans Bengali', sans-serif;
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             margin-bottom: 25px;
             text-align: justify;
         }
         
         .highlight {
-            font-family: 'SuttonyMJ', 'Noto Sans Bengali', sans-serif;
             color: #ffd166;
-            font-weight: bold;
+            font-weight: 600;
         }
         
         .priorities {
@@ -209,10 +222,9 @@
         }
         
         .priorities h3 {
-            font-family: 'SuttonyMJ', 'Noto Sans Bengali', sans-serif;
             color: #06d6a0;
             margin-bottom: 15px;
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             border-bottom: 1px solid rgba(255, 255, 255, 0.2);
             padding-bottom: 5px;
         }
@@ -222,7 +234,6 @@
         }
         
         .priority-list li {
-            font-family: 'SuttonyMJ', 'Noto Sans Bengali', sans-serif;
             margin-bottom: 15px;
             padding-left: 20px;
             position: relative;
@@ -238,7 +249,6 @@
         }
         
         .conclusion {
-            font-family: 'SuttonyMJ', 'Noto Sans Bengali', sans-serif;
             margin-top: 30px;
             font-style: italic;
             text-align: center;
@@ -255,33 +265,110 @@
         }
         
         .name {
-            font-family: 'SuttonyMJ', 'Noto Sans Bengali', sans-serif;
             font-size: 1.3rem;
             color: #ffd166;
             margin-bottom: 5px;
         }
         
         .designation {
-            font-family: 'SuttonyMJ', 'Noto Sans Bengali', sans-serif;
             font-size: 1rem;
             color: #06d6a0;
         }
         
+        /* মোবাইল রেসপন্সিভ স্টাইল */
         @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .header {
+                padding: 15px 20px;
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .logo-container {
+                justify-content: center;
+                margin-bottom: 10px;
+            }
+            
+            .logo {
+                width: 60px;
+                height: 60px;
+                margin-right: 0;
+            }
+            
+            .logo i {
+                font-size: 30px;
+            }
+            
+            .header h1 {
+                font-size: 1.6rem;
+            }
+            
+            .header h2 {
+                font-size: 1.1rem;
+            }
+            
             .content {
+                padding: 15px;
                 flex-direction: column-reverse;
+            }
+            
+            .text-content, .image-content {
+                padding: 10px;
+                width: 100%;
             }
             
             .image-content {
                 margin-bottom: 20px;
             }
             
+            .president-img {
+                max-width: 200px;
+            }
+            
+            .greeting {
+                font-size: 1.4rem;
+            }
+            
+            .message {
+                font-size: 1rem;
+            }
+            
+            .priorities h3 {
+                font-size: 1.2rem;
+            }
+            
+            .conclusion {
+                padding: 10px;
+            }
+            
+            .signature {
+                text-align: center;
+                padding-right: 0;
+            }
+        }
+        
+        @media (max-width: 480px) {
             .header h1 {
-                font-size: 2rem;
+                font-size: 1.4rem;
             }
             
             .header h2 {
+                font-size: 1rem;
+            }
+            
+            .greeting {
                 font-size: 1.2rem;
+            }
+            
+            .president-name {
+                font-size: 1.2rem;
+            }
+            
+            .name {
+                font-size: 1.1rem;
             }
         }
     </style>
@@ -289,8 +376,15 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>বাংলাদেশ নার্সেস এসোসিয়েশন (বিএনএ) </h1>
-            <h2>ময়মনসিংহ জেলা শাখা</h2>
+            <div class="logo-container">
+                <div class="logo">
+                    <i class="https://ik.imagekit.io/nasirbam/bna_logo.png?updatedAt=1751567035734"></i>
+                </div>
+                <div class="header-text">
+                    <h1>বাংলাদেশ নার্সেস এসোসিয়েশন (বিএনএ) </h1>
+                    <h2>ময়মনসিংহ জেলা শাখা</h2>
+                </div>
+            </div>
         </div>
         
         <div class="content">
@@ -318,7 +412,7 @@
                 
                 <div class="conclusion">
                     <p>আমি দৃঢ়ভাবে বিশ্বাস করি, আমাদের সম্মিলিত প্রচেষ্টা ও একতাই পারে ময়মনসিংহ জেলার নার্সিং পেশাকে একটি নতুন উচ্চতায় নিয়ে যেতে। আমি প্রত্যেক নার্স ভাই-বোনকে এই সংগ্রামে অংশগ্রহণ ও সহযোগিতা করার জন্য অনুরোধ করছি। আপনার মতামত, আপনার পরামর্শ এবং আপনার সক্রিয় অংশগ্রহণই এই সংগঠনকে সফলতার শিখরে পৌঁছে দিতে পারে।</p>
-                    <p>আসুন, আমরা সবাই মিলে একটি শক্তিশালী, গতিশীল এবং অগ্রগামী নার্সিং সম্প্রদায় গড়ে তুলি। আমাদের এই সম্মিলিত প্রয়াসই ময়মনসিংহের স্বাস্থ্যখাতে এক নতুন ইতিহাস রচনা করবে।</p>
+                    <p>আসুন, আমরা সবাই মিলে একটি শক্তিশলী, গতিশীল এবং অগ্রগামী নার্সিং সম্প্রদায় গড়ে তুলি। আমাদের এই সম্মিলিত প্রয়াসই ময়মনসিংহের স্বাস্থ্যখাতে এক নতুন ইতিহাস রচনা করবে।</p>
                     <p>আল্লাহ আমাদের সকলের মঙ্গল করুন। সকলকে ধন্যবাদ।</p>
                 </div>
                 
@@ -337,19 +431,35 @@
                     <div class="president-designation">সভাপতি, বাংলাদেশ নার্সেস এসোসিয়েশন</div>
                     
                     <div class="education">
-                        <h4>শিক্ষাগত যোগ্যতা:</h4>
+                        
                         <p>• এমপিএইচ (এনইউ)</p>
-                        <p>• বি.এস.সি ইন নার্সিং (ডিইউ)</p>
+                        <p>• পোস্ট বেসিক বি.এস.সি ইন নার্সিং (ডিইউ)</p>
                         <p>• ডিপ্লোমা ইন নার্সিং (এমএনসি)</p>
                     </div>
                     
                     <div class="contact">
                         <i class="fas fa-phone-alt"></i>
-                        <a href="tel:+8801712345678">+৮৮০ ১৭১১-১৭৮৮৯৪</a>
+                        <a href="tel:+8801712345678">+৮৮০ ১৭১২-৩৪৫৬৭৮</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <script>
+        // মোবাইল ডিভাইসের জন্য অতিরিক্ত অপ্টিমাইজেশন
+        document.addEventListener('DOMContentLoaded', function() {
+            // টাচ ডিভাইসের জন্য হোভার ইফেক্ট অপ্টিমাইজেশন
+            if ('ontouchstart' in window) {
+                document.body.classList.add('touch-device');
+            }
+            
+            // ছবি লোডিং অপ্টিমাইজেশন
+            const images = document.querySelectorAll('img');
+            images.forEach(img => {
+                img.loading = 'lazy';
+            });
+        });
+    </script>
 </body>
 </html>
